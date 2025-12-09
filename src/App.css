@@ -1,0 +1,463 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Remove conflicting root styles for VS Code theme */
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.vscode-root {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Segoe UI', 'Fira Mono', 'monospace', Arial, sans-serif;
+  overflow: hidden;
+  min-width: 0;
+  min-height: 0;
+}
+
+.vscode-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100vh;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  width: 100vw;
+}
+
+.vscode-sidebar {
+  width: 60px;
+  background: #23272e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  border-right: 1.5px solid #222;
+  gap: 1.5rem;
+  min-height: 100vh;
+  z-index: 2;
+  transition: all 0.2s;
+}
+
+.vscode-sidebar button {
+  flex: 1 1 48px;
+  min-width: 48px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Placeholders for components */
+.sidebar-placeholder, .topbar-placeholder, .editortabs-placeholder, .terminalfooter-placeholder {
+  padding: 1rem;
+  border: 1px dashed #333;
+  margin: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .vscode-root {
+    flex-direction: column;
+  }
+  .vscode-main {
+    height: auto;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .vscode-root {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* TopBar responsive */
+  .topbar-responsive {
+    height: 40px !important;
+    padding: 0 0.8rem !important;
+    font-size: 0.85rem !important;
+    flex-shrink: 0;
+  }
+  
+  .topbar-name {
+    font-size: 0.9rem !important;
+    max-width: 60%;
+  }
+  
+  .topbar-location {
+    display: none; /* Hide location on very small screens */
+  }
+  
+  .topbar-links {
+    gap: 0.6rem !important;
+    max-width: 40%;
+    overflow: hidden;
+  }
+  
+  .topbar-link {
+    font-size: 0.75rem !important;
+  }
+  
+  .topbar-link-phone {
+    display: none; /* Hide phone link on mobile (footer has it) */
+  }
+  
+  /* Terminal Footer responsive */
+  .terminal-footer-responsive {
+    padding: 0.5rem 0.8rem !important;
+    font-size: 0.75rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    min-height: auto !important;
+    height: auto !important;
+    flex-shrink: 0;
+  }
+  
+  .footer-name {
+    font-size: 0.75rem !important;
+  }
+  
+  .footer-email,
+  .footer-phone {
+    font-size: 0.7rem !important;
+  }
+  
+  .vscode-main {
+    padding: 0;
+    min-width: 0;
+    min-height: 0;
+    height: 100vh;
+    overflow: hidden;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px; /* Space for sidebar */
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Make EditorTabs take remaining space */
+  .editor-tabs-wrapper {
+    flex: 1 1 auto !important;
+    overflow-y: auto !important;
+    min-height: 0 !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .vscode-sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 40px !important;
+    min-height: 0 !important;
+    flex-direction: row !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    border-top: 1.5px solid #222 !important;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0 !important;
+    padding: 0 !important;
+    z-index: 100;
+    background: #23272e;
+  }
+  
+  .vscode-sidebar button {
+    flex: 1 1 40px;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* Hide scrollbars for a cleaner look */
+.vscode-main::-webkit-scrollbar, .vscode-root::-webkit-scrollbar {
+  display: none;
+}
+
+/* Responsive styles for About page and other sections */
+@media (max-width: 768px) {
+  .about-content-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .about-profile-card {
+    width: 100% !important;
+    min-width: unset !important;
+    max-width: 100% !important;
+  }
+
+  .profile-image-responsive {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .about-text-content {
+    width: 100% !important;
+  }
+
+  .about-title-responsive {
+    font-size: 1.1rem !important;
+  }
+
+  .about-header-responsive {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .skills-grid-responsive {
+    grid-template-columns: 1fr !important;
+  }
+
+  .editor-content-responsive {
+    padding: 1rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-content-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .about-profile-card {
+    padding: 0.8rem !important;
+  }
+
+  .profile-image-responsive {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .about-text-content {
+    padding: 1rem !important;
+  }
+
+  .about-title-responsive {
+    font-size: 1rem !important;
+  }
+
+  .editor-content-responsive {
+    padding: 0.8rem !important;
+  }
+
+  .vscode-sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 48px !important;
+    min-height: 0 !important;
+    flex-direction: row !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    border-top: 1.5px solid #222 !important;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0 !important;
+    padding: 0 !important;
+    z-index: 100;
+    background: #23272e;
+  }
+
+  .vscode-sidebar button {
+    flex: 1 1 48px;
+    min-width: 48px;
+    min-height: 48px;
+    max-width: 48px;
+    max-height: 48px;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    border-left: none !important;
+    border-bottom: 4px solid transparent;
+  }
+
+  .sidebar-button-responsive {
+    border-left: none !important;
+    border-bottom: 4px solid transparent !important;
+  }
+
+  .vscode-sidebar button:hover,
+  .vscode-sidebar button:active,
+  .sidebar-button-responsive:hover,
+  .sidebar-button-responsive:active {
+    border-bottom: 4px solid #4FC3F7 !important;
+    border-left: none !important;
+  }
+}
+
+/* Responsive adjustments for Experience, Projects, and other sections */
+@media (max-width: 768px) {
+  /* Experience and Projects grid adjustments */
+  .editor-content-responsive [style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Contact section adjustments */
+  .editor-content-responsive [style*="repeat(auto-fit"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ensure all grid layouts stack on very small screens */
+  .editor-content-responsive [style*="grid"] {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Reduce padding and font sizes further */
+  .editor-content-responsive > div > div {
+    padding: 0.6rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* TopBar extra small screens */
+  .topbar-responsive {
+    height: 36px !important;
+    padding: 0 0.5rem !important;
+  }
+  
+  .topbar-name {
+    font-size: 0.8rem !important;
+  }
+  
+  .topbar-link {
+    font-size: 0.7rem !important;
+  }
+  
+  .topbar-link-email {
+    display: none; /* Hide email link too on very small screens */
+  }
+  
+  /* Footer extra small screens */
+  .terminal-footer-responsive {
+    padding: 0.4rem 0.5rem !important;
+    font-size: 0.7rem !important;
+  }
+  
+  .footer-name,
+  .footer-email,
+  .footer-phone {
+    font-size: 0.65rem !important;
+  }
+  
+  /* Sidebar extra small */
+  .vscode-sidebar {
+    height: 36px !important;
+  }
+  
+  .vscode-sidebar button {
+    min-width: 36px !important;
+    min-height: 36px !important;
+    max-width: 36px !important;
+    max-height: 36px !important;
+    font-size: 1.2rem !important;
+  }
+  
+  .vscode-main {
+    height: 100vh !important;
+    padding-bottom: 36px !important;
+  }
+  
+  /* Editor tabs will automatically take remaining space with flex: 1 */
+
+  .about-header-responsive {
+    padding: 0.5rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .profile-image-responsive {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .about-text-content {
+    padding: 0.8rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  .about-title-responsive {
+    font-size: 0.95rem !important;
+  }
+
+  .editor-content-responsive {
+    padding: 0.5rem !important;
+  }
+
+  /* Tab area responsive adjustments */
+  .editor-tabs-container {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .editor-tabs-container > div {
+    padding: 0.5rem 0.8rem !important;
+    font-size: 0.85rem !important;
+    min-width: 80px !important;
+  }
+}

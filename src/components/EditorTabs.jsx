@@ -23,7 +23,7 @@ const experience = [
   {
     company: 'Jordainan Academy for Maritime Studies',
     period: 'Jan 2025 – Present',
-    title: 'Junior Computer Programmer',
+    title: 'Software Developer',
     details: [
       'Developed and customized a Customer Relationship Management (CRM) system using PHP and Oracle, streamlining data management for 50+ users.',
       'Engineered and modernized critical business systems, developing new features in PHP/Oracle while maintaining legacy infrastructure.',
@@ -247,7 +247,7 @@ function TabContent({ tab, profileImage }) {
             <div className="about-text-content" style={{ background: 'linear-gradient(145deg, #1b1f24 0%, #11161c 100%)', border: '1px solid #23272e', borderRadius: 12, padding: '1.2rem', boxShadow: '0 10px 30px #0005', display: 'flex', flexDirection: 'column', gap: '1rem', width: '100%' }}>
               <div className="about-title-responsive" style={{ fontWeight: 'bold', fontSize: '1.35rem', color: '#4FC3F7' }}>
               <Typewriter
-                words={["Hi, I'm Qutaibh Subeh."]}
+                words={["Hi, I'm Qutaiba Subuh."]}
                 loop={1}
                 cursor
                 cursorStyle='|'

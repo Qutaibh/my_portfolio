@@ -13,22 +13,23 @@ const allTabs = [
   'Contact',
 ];
 
-const aboutText = `I’m a curious and driven computer science graduate with a passion for building things that matter. Whether it’s crafting clean code, designing intuitive interfaces, or uncovering insights from data, I thrive on turning ideas into reality.
+const aboutText = `I’m a software developer who enjoys building practical, user-focused solutions, whether it’s designing system architecture, developing responsive frontends, or optimizing database workflows.
 
-Currently, as a Programmer at JAMS, I’m focused on developing efficient software solutions, enhancing system functionality, and collaborating with teams to deliver high-quality applications. Previously, I worked as a Software Developer at Sphereka, where I contributed to Django-based projects, including an e-commerce platform and a company showcase website. I also had the opportunity to be a Fellow at Correlation One, where I sharpened my skills in Python, SQL, and data visualization.
-
-I’m still early in my journey, but I’m eager to learn, grow, and collaborate with others who share a love for technology and innovation. If you’re working on something exciting or just want to chat about tech, feel free to reach out!`;
+Recently, I worked at the Jordanian Academy for Maritime Studies, where I modernized internal systems, integrated AI automation, improved legacy platforms, and supported academy-wide IT operations.
+Before that, I developed Django-based platforms at Sphereka and completed a Correlation One fellowship focusing on Python, SQL, and analytics.
+I’m always looking to grow, learn new technologies, and work with teams that value innovation.
+If you’re working on something exciting or just want to chat about tech/memes, HIT ME UP!`;
 
 const experience = [
   {
     company: 'Jordainan Academy for Maritime Studies',
-    period: 'Jan 2025 – Present',
+    period: 'Jan 2025 – Jan 2026',
     title: 'Software Developer',
     details: [
-      'Developed and customized a Customer Relationship Management (CRM) system using PHP and Oracle, streamlining data management for 50+ users.',
-      'Engineered and modernized critical business systems, developing new features in PHP/Oracle while maintaining legacy infrastructure.',
-      'Spearheaded FAWTARA e-invoicing system implementation, ensuring 100% compliance and automating invoice processing',
-      'Trained staff and provided support on internal systems.',
+      'Architected and customized a Customer Relationship Management (CRM) system using PHP and Oracle, streamlining complex data management for 50+ users.',
+      'Integrated Generative AI and DeepSeek LLMs to automate internal workflows and enhance data-driven decision-making.',
+      'Spearheaded FAWTARA e-invoicing system implementation, ensuring 100% regulatory compliance and automating financial processing.',
+      'Modernized business-critical systems by developing new features in PHP/Oracle while maintaining high-availability legacy infrastructure.',
       'Monitored IT hardware, internet, and antivirus protection.',
     ],
   },
@@ -128,6 +129,16 @@ const projects = [
 ];
 const certificates = [
   {
+    name: 'Qualify You Bootcamp',
+    type: 'Online Bootcamp',
+    date: 'December 2025',
+    details: [
+      'Developing RESTful APIs for real-time task management and user presence tracking using asynchronous processing.',
+      'Implementing secure authentication systems with granular role-based access control (RBAC) for organizational hierarchies.',
+
+    ],
+  },
+  {
     name: 'The Complete Web Development Bootcamp',
     type: 'Online Udemy Course',
     date: 'In Progress',
@@ -187,7 +198,7 @@ const certificates = [
 const skills = [
   'Dart', 'Python', 'C/C++', 'SQL', 'PHP', 'Oracle', 'JavaScript', 'HTML/CSS',
   'Flutter', 'Django', 'Database Management', 'Excel', 'Git',
-  'Android Studio', 'VS Code', 'Postman', 'XAMPP', 'WAMP',
+  'Android Studio', 'VS Code', 'Postman', 'XAMPP', 'WAMP','JIRA', 'AGILE',
 ];
 
 const languages = [
